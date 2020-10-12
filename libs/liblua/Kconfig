@@ -1,0 +1,13 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+comment "Lua Support"
+
+config HAVE_LUA
+	bool "Have LUA"
+	default y
+	---help---
+		Toolchain supports C++ and CXX, CXXFLAGS, and COMPILEXX have been
+		defined in the configurations Make.defs file.

@@ -75,6 +75,7 @@ endif
 
 ifeq ($(CONFIG_HAVE_CXX),y)
 NUTTXLIBS += staging$(DELIM)$(LIBXX)$(LIBEXT)
+NUTTXLIBS += staging$(DELIM)$(LIBLUA)$(LIBEXT)
 endif
 
 # Add library for application support.

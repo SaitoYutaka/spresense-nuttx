@@ -194,6 +194,12 @@ libs$(DELIM)libxx$(DELIM)$(LIBXX)$(LIBEXT): context
 staging$(DELIM)$(LIBXX)$(LIBEXT): libs$(DELIM)libxx$(DELIM)$(LIBXX)$(LIBEXT)
 	$(Q) $(call INSTALL_LIB,$<,$@)
 
+libs$(DELIM)liblua$(DELIM)$(LIBLUA)$(LIBEXT): context
+	$(Q) $(MAKE) -C libs$(DELIM)liblua TOPDIR="$(TOPDIR)" $(LIBLUA)$(LIBEXT) KERNEL=n
+
+staging$(DELIM)$(LIBLUA)$(LIBEXT): libs$(DELIM)liblua$(DELIM)$(LIBLUA)$(LIBEXT)
+	$(Q) $(call INSTALL_LIB,$<,$@)
+
 $(APPDIR)$(DELIM)libapps$(LIBEXT): context
 	$(Q) $(MAKE) -C $(APPDIR) TOPDIR="$(TOPDIR)" KERNEL=n
 

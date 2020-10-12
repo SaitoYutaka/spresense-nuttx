@@ -73,6 +73,7 @@ endif
 
 ifeq ($(CONFIG_HAVE_CXX),y)
 USERLIBS += staging$(DELIM)$(LIBXX)$(LIBEXT)
+USERLIBS += staging$(DELIM)$(LIBLUA)$(LIBEXT)
 endif
 
 # Add library for application support.

@@ -73,6 +73,7 @@ LIBXX=libcxx
 else
 LIBXX=libxx
 endif
+LIBLUA=liblua
 
 KERNDEPDIRS += sched drivers boards $(ARCH_SRC)
 KERNDEPDIRS += fs binfmt
@@ -84,6 +85,7 @@ ifeq ($(CONFIG_BUILD_FLAT),y)
 KERNDEPDIRS += libs$(DELIM)libc mm
 ifeq ($(CONFIG_HAVE_CXX),y)
 KERNDEPDIRS += libs$(DELIM)libxx
+KERNDEPDIRS += libs$(DELIM)liblua
 else
 CLEANDIRS += libs$(DELIM)libxx
 endif
@@ -93,6 +95,7 @@ else
 USERDEPDIRS += libs$(DELIM)libc mm
 ifeq ($(CONFIG_HAVE_CXX),y)
 USERDEPDIRS += libs$(DELIM)libxx
+USERDEPDIRS += libs$(DELIM)liblua
 else
 CLEANDIRS += libs$(DELIM)libxx
 endif

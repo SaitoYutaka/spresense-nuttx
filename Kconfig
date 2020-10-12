@@ -1796,6 +1796,7 @@ endmenu
 menu "Library Routines"
 source libs/libc/Kconfig
 source libs/libxx/Kconfig
+source libs/liblua/Kconfig
 source libs/libdsp/Kconfig
 endmenu
 

@@ -64,6 +64,7 @@ USERLIBS  += staging$(DELIM)libumm$(LIBEXT) staging$(DELIM)libuarch$(LIBEXT)
 
 ifeq ($(CONFIG_HAVE_CXX),y)
 USERLIBS += staging$(DELIM)$(LIBXX)$(LIBEXT)
+USERLIBS += staging$(DELIM)$(LIBLUA)$(LIBEXT)
 endif
 
 # Add libraries for network support
